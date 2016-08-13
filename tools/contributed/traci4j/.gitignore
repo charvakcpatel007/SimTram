@@ -1,0 +1,13 @@
+bin/
+junit*.properties
+junit/
+.idea/
+*.jar
+*.iml
+
+*~
+
+.DS_Store
+
+doc/
+/target/

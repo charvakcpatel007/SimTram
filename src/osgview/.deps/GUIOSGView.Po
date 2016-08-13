@@ -1,0 +1,6 @@
+GUIOSGView.o: GUIOSGView.cpp /usr/include/stdc-predef.h \
+ ../../src/config.h
+
+/usr/include/stdc-predef.h:
+
+../../src/config.h:
