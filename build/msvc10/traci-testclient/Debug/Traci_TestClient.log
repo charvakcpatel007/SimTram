@@ -1,0 +1,40 @@
+﻿Build started 9/1/2016 7:58:47 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\traci-testclient\Traci_TestClient.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\traci_testclient\TraCITestClient.cpp ..\..\..\src\utils\traci\TraCIAPI.cpp
+         TraCITestClient.cpp
+         TraCIAPI.cpp
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\xtree(1063): warning C4503: 'std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Insert_hint' : decorated name length exceeded, name was truncated
+                 with
+                 [
+                     _Kty=std::string
+         ,            _Ty=TraCIAPI::SubscribedValues
+         ,            _Pr=std::less<std::string>
+         ,            _Alloc=std::allocator<std::pair<const std::string,TraCIAPI::SubscribedValues>>
+                 ]
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\tracitestclient_main1.obj" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\traci_testclient\tracitestclient_main.cpp
+         tracitestclient_main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\TraciTestClientD.exe" /NOLOGO "C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\lib\xerces-c_3D.lib" "C:\Users\Asus\Desktop\Minor\fox-1.6.50\lib\FOXDLLD-1.6.lib" ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\TraciTestClientD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\TraciTestClientD.lib" /MACHINE:X86 /SAFESEH Debug\TraCITestClient.obj
+         Debug\TraCIAPI.obj
+         Debug\tracitestclient_main1.obj
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_nvwa\Debug\zz_foreign_nvwa.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_tcpip\Debug\zz_foreign_tcpip.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_common\Debug\z_libutils_common.lib
+     1>TraCITestClient.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         Traci_TestClient.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\traci-testclient\Debug\TraciTestClientD.exe
+       PostBuildEvent:
+         xcopy /Y C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\traci-testclient\Debug\TraciTestClientD.exe ..\..\..\bin\
+         :VCEnd
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\traci-testclient\Debug\TraciTestClientD.exe
+         1 File(s) copied
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\traci-testclient\Traci_TestClient.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.42

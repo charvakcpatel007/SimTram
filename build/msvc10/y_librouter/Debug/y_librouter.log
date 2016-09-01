@@ -1,0 +1,40 @@
+﻿Build started 9/1/2016 7:51:13 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_librouter\y_librouter.vcxproj" on node 5 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\router\ROEdge.cpp ..\..\..\src\router\ROFrame.cpp ..\..\..\src\router\ROHelper.cpp ..\..\..\src\router\ROLoader.cpp ..\..\..\src\router\RONet.cpp ..\..\..\src\router\RONetHandler.cpp ..\..\..\src\router\RONode.cpp ..\..\..\src\router\ROPerson.cpp ..\..\..\src\router\RORoute.cpp ..\..\..\src\router\RORouteDef.cpp ..\..\..\src\router\RORouteHandler.cpp ..\..\..\src\router\ROVehicle.cpp
+         ROEdge.cpp
+         ROFrame.cpp
+         ROHelper.cpp
+         ROLoader.cpp
+         RONet.cpp
+         RONetHandler.cpp
+         RONode.cpp
+         ROPerson.cpp
+         RORoute.cpp
+         RORouteDef.cpp
+         RORouteHandler.cpp
+         ROVehicle.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\y_librouter.lib" /NOLOGO /NODEFAULTLIB Debug\ROEdge.obj
+         Debug\ROFrame.obj
+         Debug\ROHelper.obj
+         Debug\ROLoader.obj
+         Debug\RONet.obj
+         Debug\RONetHandler.obj
+         Debug\RONode.obj
+         Debug\ROPerson.obj
+         Debug\RORoute.obj
+         Debug\RORouteDef.obj
+         Debug\RORouteHandler.obj
+         Debug\ROVehicle.obj
+         y_librouter.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_librouter\Debug\y_librouter.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_librouter\y_librouter.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:02:04.33

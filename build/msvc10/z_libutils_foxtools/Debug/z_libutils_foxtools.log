@@ -1,0 +1,47 @@
+﻿Build started 9/1/2016 7:54:51 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_foxtools\z_libutils_foxtools.vcxproj" on node 5 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\utils\foxtools\FXBaseObject.cpp ..\..\..\src\utils\foxtools\FXLCDLabel.cpp ..\..\..\src\utils\foxtools\FXLinkLabel.cpp ..\..\..\src\utils\foxtools\FXRealSpinDial.cpp ..\..\..\src\utils\foxtools\FXSevenSegment.cpp ..\..\..\src\utils\foxtools\FXSingleEventThread.cpp ..\..\..\src\utils\foxtools\FXThreadEvent.cpp ..\..\..\src\utils\foxtools\MFXAddEditTypedTable.cpp ..\..\..\src\utils\foxtools\MFXCheckableButton.cpp ..\..\..\src\utils\foxtools\MFXEditableTable.cpp ..\..\..\src\utils\foxtools\MFXEventQue.cpp ..\..\..\src\utils\foxtools\MFXImageHelper.cpp ..\..\..\src\utils\foxtools\MFXMenuHeader.cpp ..\..\..\src\utils\foxtools\MFXMutex.cpp ..\..\..\src\utils\foxtools\MFXUtils.cpp
+         FXBaseObject.cpp
+         FXLCDLabel.cpp
+         FXLinkLabel.cpp
+         FXRealSpinDial.cpp
+         FXSevenSegment.cpp
+         FXSingleEventThread.cpp
+         FXThreadEvent.cpp
+         MFXAddEditTypedTable.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\utils\foxtools\mfxaddedittypedtable.cpp(598): warning C4018: '<=' : signed/unsigned mismatch
+         MFXCheckableButton.cpp
+         MFXEditableTable.cpp
+         MFXEventQue.cpp
+         MFXImageHelper.cpp
+         MFXMenuHeader.cpp
+         MFXMutex.cpp
+         MFXUtils.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libutils_foxtools.lib" /NOLOGO Debug\FXBaseObject.obj
+         Debug\FXLCDLabel.obj
+         Debug\FXLinkLabel.obj
+         Debug\FXRealSpinDial.obj
+         Debug\FXSevenSegment.obj
+         Debug\FXSingleEventThread.obj
+         Debug\FXThreadEvent.obj
+         Debug\MFXAddEditTypedTable.obj
+         Debug\MFXCheckableButton.obj
+         Debug\MFXEditableTable.obj
+         Debug\MFXEventQue.obj
+         Debug\MFXImageHelper.obj
+         Debug\MFXMenuHeader.obj
+         Debug\MFXMutex.obj
+         Debug\MFXUtils.obj
+         z_libutils_foxtools.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_foxtools\Debug\z_libutils_foxtools.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_foxtools\z_libutils_foxtools.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:23.04

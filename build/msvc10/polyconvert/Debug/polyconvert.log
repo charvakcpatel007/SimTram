@@ -1,0 +1,52 @@
+﻿Build started 9/1/2016 7:58:45 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\polyconvert\polyconvert.vcxproj" on node 4 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         ..\..\..\tools\build\typemap.py poly
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\polyconvert\PCLoaderArcView.cpp ..\..\..\src\polyconvert\PCLoaderDlrNavteq.cpp ..\..\..\src\polyconvert\PCLoaderOSM.cpp ..\..\..\src\polyconvert\PCLoaderVisum.cpp ..\..\..\src\polyconvert\PCLoaderXML.cpp ..\..\..\src\polyconvert\PCNetProjectionLoader.cpp ..\..\..\src\polyconvert\PCPolyContainer.cpp ..\..\..\src\polyconvert\PCTypeDefHandler.cpp ..\..\..\src\polyconvert\PCTypeMap.cpp ..\..\..\src\polyconvert\polyconvert_main.cpp
+         PCLoaderArcView.cpp
+         PCLoaderDlrNavteq.cpp
+         PCLoaderOSM.cpp
+         PCLoaderVisum.cpp
+         PCLoaderXML.cpp
+         PCNetProjectionLoader.cpp
+         PCPolyContainer.cpp
+         PCTypeDefHandler.cpp
+         PCTypeMap.cpp
+         polyconvert_main.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\polyconvertD.exe" /NOLOGO "C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\lib\proj_i.lib" "C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\lib\xerces-c_3D.lib" "C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\lib\gdal_i.lib" ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\polyconvertD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\polyconvertD.lib" /MACHINE:X86 /SAFESEH Debug\PCLoaderArcView.obj
+         Debug\PCLoaderDlrNavteq.obj
+         Debug\PCLoaderOSM.obj
+         Debug\PCLoaderVisum.obj
+         Debug\PCLoaderXML.obj
+         Debug\PCNetProjectionLoader.obj
+         Debug\PCPolyContainer.obj
+         Debug\PCTypeDefHandler.obj
+         Debug\PCTypeMap.obj
+         Debug\polyconvert_main.obj
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_nvwa\Debug\zz_foreign_nvwa.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_tcpip\Debug\zz_foreign_tcpip.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_common\Debug\z_libutils_common.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_geom\Debug\z_libutils_geom.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_importio\Debug\z_libutils_importio.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_iodevices\Debug\z_libutils_iodevices.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_options\Debug\z_libutils_options.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_xml\Debug\z_libutils_xml.lib
+     1>PCLoaderArcView.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+            Creating library Debug\polyconvertD.lib and object Debug\polyconvertD.exp
+         polyconvert.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\polyconvert\Debug\polyconvertD.exe
+       PostBuildEvent:
+         xcopy /Y C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\polyconvert\Debug\polyconvertD.exe ..\..\..\bin\
+         :VCEnd
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\polyconvert\Debug\polyconvertD.exe
+         1 File(s) copied
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\polyconvert\polyconvert.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:26.55

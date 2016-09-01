@@ -1,0 +1,73 @@
+﻿Build started 9/1/2016 7:52:03 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetbuild\y_libnetbuild.vcxproj" on node 5 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\netbuild\NBAlgorithms.cpp ..\..\..\src\netbuild\NBAlgorithms_Ramps.cpp ..\..\..\src\netbuild\NBConnection.cpp ..\..\..\src\netbuild\NBContHelper.cpp ..\..\..\src\netbuild\NBDistribution.cpp ..\..\..\src\netbuild\NBDistrict.cpp ..\..\..\src\netbuild\NBDistrictCont.cpp ..\..\..\src\netbuild\NBEdge.cpp ..\..\..\src\netbuild\NBEdgeCont.cpp ..\..\..\src\netbuild\NBFrame.cpp ..\..\..\src\netbuild\NBHeightMapper.cpp ..\..\..\src\netbuild\NBHelpers.cpp ..\..\..\src\netbuild\NBLoadedSUMOTLDef.cpp ..\..\..\src\netbuild\NBLoadedTLDef.cpp ..\..\..\src\netbuild\NBNetBuilder.cpp ..\..\..\src\netbuild\NBNode.cpp ..\..\..\src\netbuild\NBNodeCont.cpp ..\..\..\src\netbuild\NBNodeShapeComputer.cpp ..\..\..\src\netbuild\NBOwnTLDef.cpp ..\..\..\src\netbuild\NBRequest.cpp ..\..\..\src\netbuild\NBSign.cpp ..\..\..\src\netbuild\NBTrafficLightDefinition.cpp ..\..\..\src\netbuild\NBTrafficLightLogic.cpp ..\..\..\src\netbuild\NBTrafficLightLogicCont.cpp ..\..\..\src\netbuild\NBTypeCont.cpp
+         NBAlgorithms.cpp
+         NBAlgorithms_Ramps.cpp
+         NBConnection.cpp
+         NBContHelper.cpp
+         NBDistribution.cpp
+         NBDistrict.cpp
+         NBDistrictCont.cpp
+         NBEdge.cpp
+         NBEdgeCont.cpp
+         NBFrame.cpp
+         NBHeightMapper.cpp
+     1>c:\users\asus\desktop\minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include\gdal_priv.h(451): warning C4251: 'GDALColorTable::aoEntries' : class 'std::vector<GDALColorEntry,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'GDALColorTable'
+                 with
+                 [
+                     _Ty=GDALColorEntry
+                 ]
+         NBHelpers.cpp
+         NBLoadedSUMOTLDef.cpp
+         NBLoadedTLDef.cpp
+         NBNetBuilder.cpp
+         NBNode.cpp
+         NBNodeCont.cpp
+         NBNodeShapeComputer.cpp
+         NBOwnTLDef.cpp
+         NBRequest.cpp
+         Generating Code...
+         Compiling...
+         NBSign.cpp
+         NBTrafficLightDefinition.cpp
+         NBTrafficLightLogic.cpp
+         NBTrafficLightLogicCont.cpp
+         NBTypeCont.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\y_libnetbuild.lib" /NOLOGO Debug\NBAlgorithms.obj
+         Debug\NBAlgorithms_Ramps.obj
+         Debug\NBConnection.obj
+         Debug\NBContHelper.obj
+         Debug\NBDistribution.obj
+         Debug\NBDistrict.obj
+         Debug\NBDistrictCont.obj
+         Debug\NBEdge.obj
+         Debug\NBEdgeCont.obj
+         Debug\NBFrame.obj
+         Debug\NBHeightMapper.obj
+         Debug\NBHelpers.obj
+         Debug\NBLoadedSUMOTLDef.obj
+         Debug\NBLoadedTLDef.obj
+         Debug\NBNetBuilder.obj
+         Debug\NBNode.obj
+         Debug\NBNodeCont.obj
+         Debug\NBNodeShapeComputer.obj
+         Debug\NBOwnTLDef.obj
+         Debug\NBRequest.obj
+         Debug\NBSign.obj
+         Debug\NBTrafficLightDefinition.obj
+         Debug\NBTrafficLightLogic.obj
+         Debug\NBTrafficLightLogicCont.obj
+         Debug\NBTypeCont.obj
+         y_libnetbuild.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetbuild\Debug\y_libnetbuild.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetbuild\y_libnetbuild.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:15.54

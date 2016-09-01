@@ -1,0 +1,22 @@
+﻿Build started 9/1/2016 7:55:48 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmesogui\y_libmesogui.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\mesogui\GUIMEInductLoop.cpp ..\..\..\src\mesogui\GUIMEVehicle.cpp ..\..\..\src\mesogui\GUIMEVehicleControl.cpp
+         GUIMEInductLoop.cpp
+         GUIMEVehicle.cpp
+         GUIMEVehicleControl.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\y_libmesogui.lib" /NOLOGO Debug\GUIMEInductLoop.obj
+         Debug\GUIMEVehicle.obj
+         Debug\GUIMEVehicleControl.obj
+         y_libmesogui.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmesogui\Debug\y_libmesogui.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmesogui\y_libmesogui.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.08

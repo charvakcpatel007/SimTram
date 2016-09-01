@@ -1,0 +1,42 @@
+﻿Build started 9/1/2016 7:55:14 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_geom\z_libutils_geom.vcxproj" on node 3 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\utils\geom\bezier.cpp ..\..\..\src\utils\geom\Boundary.cpp ..\..\..\src\utils\geom\Bresenham.cpp ..\..\..\src\utils\geom\GeoConvHelper.cpp ..\..\..\src\utils\geom\GeomConvHelper.cpp ..\..\..\src\utils\geom\GeomHelper.cpp ..\..\..\src\utils\geom\Helper_ConvexHull.cpp ..\..\..\src\utils\geom\Position.cpp ..\..\..\src\utils\shapes\Polygon.cpp ..\..\..\src\utils\geom\PositionVector.cpp ..\..\..\src\utils\shapes\Shape.cpp ..\..\..\src\utils\shapes\ShapeContainer.cpp ..\..\..\src\utils\shapes\ShapeHandler.cpp
+         bezier.cpp
+         Boundary.cpp
+         Bresenham.cpp
+         GeoConvHelper.cpp
+         GeomConvHelper.cpp
+         GeomHelper.cpp
+         Helper_ConvexHull.cpp
+         Position.cpp
+         Polygon.cpp
+         PositionVector.cpp
+         Shape.cpp
+         ShapeContainer.cpp
+         ShapeHandler.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libutils_geom.lib" "C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\lib\proj_i.lib" /NOLOGO Debug\bezier.obj
+         Debug\Boundary.obj
+         Debug\Bresenham.obj
+         Debug\GeoConvHelper.obj
+         Debug\GeomConvHelper.obj
+         Debug\GeomHelper.obj
+         Debug\Helper_ConvexHull.obj
+         Debug\Position.obj
+         Debug\Polygon.obj
+         Debug\PositionVector.obj
+         Debug\Shape.obj
+         Debug\ShapeContainer.obj
+         Debug\ShapeHandler.obj
+         z_libutils_geom.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_geom\Debug\z_libutils_geom.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_geom\z_libutils_geom.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:21.12

@@ -1,0 +1,53 @@
+﻿Build started 9/1/2016 7:53:18 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetimport\y_libnetimport.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         ..\..\..\tools\build\typemap.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\netimport\NIFrame.cpp ..\..\..\src\netimport\NIImporter_ArcView.cpp ..\..\..\src\netimport\NIImporter_DlrNavteq.cpp ..\..\..\src\netimport\NIImporter_ITSUMO.cpp ..\..\..\src\netimport\NIImporter_MATSim.cpp ..\..\..\src\netimport\NIImporter_OpenDrive.cpp ..\..\..\src\netimport\NIImporter_OpenStreetMap.cpp ..\..\..\src\netimport\NIImporter_RobocupRescue.cpp ..\..\..\src\netimport\NIImporter_SUMO.cpp ..\..\..\src\netimport\NIImporter_VISUM.cpp ..\..\..\src\netimport\NILoader.cpp ..\..\..\src\netimport\NINavTeqHelper.cpp ..\..\..\src\netimport\NIVisumTL.cpp ..\..\..\src\netimport\NIXMLConnectionsHandler.cpp ..\..\..\src\netimport\NIXMLEdgesHandler.cpp ..\..\..\src\netimport\NIXMLNodesHandler.cpp ..\..\..\src\netimport\NIXMLTrafficLightsHandler.cpp ..\..\..\src\netimport\NIXMLTypesHandler.cpp
+         NIFrame.cpp
+         NIImporter_ArcView.cpp
+         NIImporter_DlrNavteq.cpp
+         NIImporter_ITSUMO.cpp
+         NIImporter_MATSim.cpp
+         NIImporter_OpenDrive.cpp
+         NIImporter_OpenStreetMap.cpp
+         NIImporter_RobocupRescue.cpp
+         NIImporter_SUMO.cpp
+         NIImporter_VISUM.cpp
+         NILoader.cpp
+         NINavTeqHelper.cpp
+         NIVisumTL.cpp
+         NIXMLConnectionsHandler.cpp
+         NIXMLEdgesHandler.cpp
+         NIXMLNodesHandler.cpp
+         NIXMLTrafficLightsHandler.cpp
+         NIXMLTypesHandler.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\y_libnetimport.lib" /NOLOGO Debug\NIFrame.obj
+         Debug\NIImporter_ArcView.obj
+         Debug\NIImporter_DlrNavteq.obj
+         Debug\NIImporter_ITSUMO.obj
+         Debug\NIImporter_MATSim.obj
+         Debug\NIImporter_OpenDrive.obj
+         Debug\NIImporter_OpenStreetMap.obj
+         Debug\NIImporter_RobocupRescue.obj
+         Debug\NIImporter_SUMO.obj
+         Debug\NIImporter_VISUM.obj
+         Debug\NILoader.obj
+         Debug\NINavTeqHelper.obj
+         Debug\NIVisumTL.obj
+         Debug\NIXMLConnectionsHandler.obj
+         Debug\NIXMLEdgesHandler.obj
+         Debug\NIXMLNodesHandler.obj
+         Debug\NIXMLTrafficLightsHandler.obj
+         Debug\NIXMLTypesHandler.obj
+         y_libnetimport.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetimport\Debug\y_libnetimport.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetimport\y_libnetimport.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:02:19.93

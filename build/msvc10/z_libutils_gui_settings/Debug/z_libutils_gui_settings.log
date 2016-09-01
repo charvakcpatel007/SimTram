@@ -1,0 +1,22 @@
+﻿Build started 9/1/2016 7:56:44 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_settings\z_libutils_gui_settings.vcxproj" on node 5 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\utils\gui\settings\GUICompleteSchemeStorage.cpp ..\..\..\src\utils\gui\settings\GUISettingsHandler.cpp ..\..\..\src\utils\gui\settings\GUIVisualizationSettings.cpp
+         GUICompleteSchemeStorage.cpp
+         GUISettingsHandler.cpp
+         GUIVisualizationSettings.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libutils_gui_settings.lib" /NOLOGO Debug\GUICompleteSchemeStorage.obj
+         Debug\GUISettingsHandler.obj
+         Debug\GUIVisualizationSettings.obj
+         z_libutils_gui_settings.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_settings\Debug\z_libutils_gui_settings.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_settings\z_libutils_gui_settings.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.67

@@ -1,0 +1,36 @@
+﻿Build started 9/1/2016 7:50:19 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_cfmodels\z_libmicrosim_cfmodels.vcxproj" on node 3 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\microsim\cfmodels\MSCFModel.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_Daniel1.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_IDM.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_Kerner.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_Krauss.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_KraussOrig1.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_KraussPS.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_PWag2009.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_SmartSK.cpp ..\..\..\src\microsim\cfmodels\MSCFModel_Wiedemann.cpp
+         MSCFModel.cpp
+         MSCFModel_Daniel1.cpp
+         MSCFModel_IDM.cpp
+         MSCFModel_Kerner.cpp
+         MSCFModel_Krauss.cpp
+         MSCFModel_KraussOrig1.cpp
+         MSCFModel_KraussPS.cpp
+         MSCFModel_PWag2009.cpp
+         MSCFModel_SmartSK.cpp
+         MSCFModel_Wiedemann.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libmicrosim_cfmodels.lib" /NOLOGO Debug\MSCFModel.obj
+         Debug\MSCFModel_Daniel1.obj
+         Debug\MSCFModel_IDM.obj
+         Debug\MSCFModel_Kerner.obj
+         Debug\MSCFModel_Krauss.obj
+         Debug\MSCFModel_KraussOrig1.obj
+         Debug\MSCFModel_KraussPS.obj
+         Debug\MSCFModel_PWag2009.obj
+         Debug\MSCFModel_SmartSK.obj
+         Debug\MSCFModel_Wiedemann.obj
+         z_libmicrosim_cfmodels.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_cfmodels\Debug\z_libmicrosim_cfmodels.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_cfmodels\z_libmicrosim_cfmodels.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:53.57

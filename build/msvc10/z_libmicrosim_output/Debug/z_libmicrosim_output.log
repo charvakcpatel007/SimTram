@@ -1,0 +1,60 @@
+﻿Build started 9/1/2016 7:54:05 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_output\z_libmicrosim_output.vcxproj" on node 5 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\microsim\output\MSBatteryExport.cpp ..\..\..\src\microsim\output\MSInstantInductLoop.cpp ..\..\..\src\microsim\output\MSMeanData_Emissions.cpp ..\..\..\src\microsim\output\MS_E2_ZS_CollectorOverLanes.cpp ..\..\..\src\microsim\output\MSDetectorControl.cpp ..\..\..\src\microsim\output\MSE2Collector.cpp ..\..\..\src\microsim\output\MSE3Collector.cpp ..\..\..\src\microsim\output\MSInductLoop.cpp ..\..\..\src\microsim\output\MSMeanData.cpp ..\..\..\src\microsim\output\MSMeanData_Harmonoise.cpp ..\..\..\src\microsim\output\MSMeanData_Net.cpp ..\..\..\src\microsim\output\MSRouteProbe.cpp ..\..\..\src\microsim\output\MSVTypeProbe.cpp ..\..\..\src\microsim\output\MSXMLRawOut.cpp ..\..\..\src\microsim\output\MSFCDExport.cpp ..\..\..\src\microsim\output\MSEmissionExport.cpp ..\..\..\src\microsim\output\MSFullExport.cpp ..\..\..\src\microsim\output\MSVTKExport.cpp ..\..\..\src\microsim\output\MSQueueExport.cpp ..\..\..\src\microsim\output\MSAmitranTrajectories.cpp ..\..\..\src\microsim\output\MSMeanData_Amitran.cpp
+         MSBatteryExport.cpp
+         MSInstantInductLoop.cpp
+         MSMeanData_Emissions.cpp
+         MS_E2_ZS_CollectorOverLanes.cpp
+         MSDetectorControl.cpp
+         MSE2Collector.cpp
+         MSE3Collector.cpp
+         MSInductLoop.cpp
+         MSMeanData.cpp
+         MSMeanData_Harmonoise.cpp
+         MSMeanData_Net.cpp
+         MSRouteProbe.cpp
+         MSVTypeProbe.cpp
+         MSXMLRawOut.cpp
+         MSFCDExport.cpp
+         MSEmissionExport.cpp
+         MSFullExport.cpp
+         MSVTKExport.cpp
+         MSQueueExport.cpp
+         MSAmitranTrajectories.cpp
+         Generating Code...
+         Compiling...
+         MSMeanData_Amitran.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libmicrosim_output.lib" /NOLOGO Debug\MSBatteryExport.obj
+         Debug\MSInstantInductLoop.obj
+         Debug\MSMeanData_Emissions.obj
+         Debug\MS_E2_ZS_CollectorOverLanes.obj
+         Debug\MSDetectorControl.obj
+         Debug\MSE2Collector.obj
+         Debug\MSE3Collector.obj
+         Debug\MSInductLoop.obj
+         Debug\MSMeanData.obj
+         Debug\MSMeanData_Harmonoise.obj
+         Debug\MSMeanData_Net.obj
+         Debug\MSRouteProbe.obj
+         Debug\MSVTypeProbe.obj
+         Debug\MSXMLRawOut.obj
+         Debug\MSFCDExport.obj
+         Debug\MSEmissionExport.obj
+         Debug\MSFullExport.obj
+         Debug\MSVTKExport.obj
+         Debug\MSQueueExport.obj
+         Debug\MSAmitranTrajectories.obj
+         Debug\MSMeanData_Amitran.obj
+         z_libmicrosim_output.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_output\Debug\z_libmicrosim_output.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_output\z_libmicrosim_output.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:28.04

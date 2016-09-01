@@ -1,0 +1,91 @@
+﻿Build started 9/1/2016 7:54:13 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_traffic_lights\z_libmicrosim_traffic_lights.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\microsim\traffic_lights\MSActuatedTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSDeterministicHiLevelTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSOffTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSPhasedTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSPushButton.cpp ..\..\..\src\microsim\traffic_lights\MSRailCrossing.cpp ..\..\..\src\microsim\traffic_lights\MSRailSignal.cpp ..\..\..\src\microsim\traffic_lights\MSSimpleTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLCongestionPolicy.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLE2Sensors.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLHiLevelTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLMarchingPolicy.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPhasePolicy.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPhaseTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPlatoonPolicy.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPlatoonTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPolicy.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPolicy3DStimulus.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPolicy5DFamilyStimulus.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPolicy5DStimulus.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPolicyBasedTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLPolicyDesirability.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLRequestPolicy.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLRequestTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLSensors.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSOTLWaveTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSSwarmTrafficLightLogic.cpp ..\..\..\src\microsim\traffic_lights\MSTLLogicControl.cpp ..\..\..\src\microsim\traffic_lights\MSTrafficLightLogic.cpp
+         MSActuatedTrafficLightLogic.cpp
+         MSDeterministicHiLevelTrafficLightLogic.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msdeterministichileveltrafficlightlogic.cpp(66): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msdeterministichileveltrafficlightlogic.cpp(68): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msdeterministichileveltrafficlightlogic.cpp(161): warning C4018: '<' : signed/unsigned mismatch
+         MSOffTrafficLightLogic.cpp
+         MSPhasedTrafficLightLogic.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msphasedtrafficlightlogic.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msphasedtrafficlightlogic.cpp(162): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msphasedtrafficlightlogic.cpp(179): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msphasedtrafficlightlogic.cpp(185): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\msphasedtrafficlightlogic.cpp(219): warning C4018: '<' : signed/unsigned mismatch
+         MSPushButton.cpp
+         MSRailCrossing.cpp
+         MSRailSignal.cpp
+         MSSimpleTrafficLightLogic.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\mssimpletrafficlightlogic.cpp(89): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\mssimpletrafficlightlogic.cpp(160): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\mssimpletrafficlightlogic.cpp(185): warning C4018: '>' : signed/unsigned mismatch
+         MSSOTLCongestionPolicy.cpp
+         MSSOTLE2Sensors.cpp
+         MSSOTLHiLevelTrafficLightLogic.cpp
+         MSSOTLMarchingPolicy.cpp
+         MSSOTLPhasePolicy.cpp
+         MSSOTLPhaseTrafficLightLogic.cpp
+         MSSOTLPlatoonPolicy.cpp
+         MSSOTLPlatoonTrafficLightLogic.cpp
+         MSSOTLPolicy.cpp
+         MSSOTLPolicy3DStimulus.cpp
+         MSSOTLPolicy5DFamilyStimulus.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\traffic_lights\mssotlpolicy5dfamilystimulus.cpp(76): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(245) : see declaration of 'strdup'
+         MSSOTLPolicy5DStimulus.cpp
+         Generating Code...
+         Compiling...
+         MSSOTLPolicyBasedTrafficLightLogic.cpp
+         MSSOTLPolicyDesirability.cpp
+         MSSOTLRequestPolicy.cpp
+         MSSOTLRequestTrafficLightLogic.cpp
+         MSSOTLSensors.cpp
+         MSSOTLTrafficLightLogic.cpp
+         MSSOTLWaveTrafficLightLogic.cpp
+         MSSwarmTrafficLightLogic.cpp
+         MSTLLogicControl.cpp
+         MSTrafficLightLogic.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libmicrosim_traffic_lights.lib" /NOLOGO Debug\MSActuatedTrafficLightLogic.obj
+         Debug\MSDeterministicHiLevelTrafficLightLogic.obj
+         Debug\MSOffTrafficLightLogic.obj
+         Debug\MSPhasedTrafficLightLogic.obj
+         Debug\MSPushButton.obj
+         Debug\MSRailCrossing.obj
+         Debug\MSRailSignal.obj
+         Debug\MSSimpleTrafficLightLogic.obj
+         Debug\MSSOTLCongestionPolicy.obj
+         Debug\MSSOTLE2Sensors.obj
+         Debug\MSSOTLHiLevelTrafficLightLogic.obj
+         Debug\MSSOTLMarchingPolicy.obj
+         Debug\MSSOTLPhasePolicy.obj
+         Debug\MSSOTLPhaseTrafficLightLogic.obj
+         Debug\MSSOTLPlatoonPolicy.obj
+         Debug\MSSOTLPlatoonTrafficLightLogic.obj
+         Debug\MSSOTLPolicy.obj
+         Debug\MSSOTLPolicy3DStimulus.obj
+         Debug\MSSOTLPolicy5DFamilyStimulus.obj
+         Debug\MSSOTLPolicy5DStimulus.obj
+         Debug\MSSOTLPolicyBasedTrafficLightLogic.obj
+         Debug\MSSOTLPolicyDesirability.obj
+         Debug\MSSOTLRequestPolicy.obj
+         Debug\MSSOTLRequestTrafficLightLogic.obj
+         Debug\MSSOTLSensors.obj
+         Debug\MSSOTLTrafficLightLogic.obj
+         Debug\MSSOTLWaveTrafficLightLogic.obj
+         Debug\MSSwarmTrafficLightLogic.obj
+         Debug\MSTLLogicControl.obj
+         Debug\MSTrafficLightLogic.obj
+         z_libmicrosim_traffic_lights.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_traffic_lights\Debug\z_libmicrosim_traffic_lights.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_traffic_lights\z_libmicrosim_traffic_lights.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:26.68

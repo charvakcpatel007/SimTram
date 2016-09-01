@@ -1,0 +1,66 @@
+﻿Build started 9/1/2016 7:51:33 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libguisim\y_libguisim.vcxproj" on node 3 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\guisim\GUIBaseVehicle.cpp ..\..\..\src\guisim\GUICalibrator.cpp ..\..\..\src\guisim\GUIChargingStation.cpp ..\..\..\src\guisim\GUIContainer.cpp ..\..\..\src\guisim\GUIContainerStop.cpp ..\..\..\src\guisim\GUIInstantInductLoop.cpp ..\..\..\src\guisim\GUIPerson.cpp ..\..\..\src\guisim\GUITransportableControl.cpp ..\..\..\src\guisim\GUI_E2_ZS_Collector.cpp ..\..\..\src\guisim\GUI_E2_ZS_CollectorOverLanes.cpp ..\..\..\src\guisim\GUIBusStop.cpp ..\..\..\src\guisim\GUIDetectorWrapper.cpp ..\..\..\src\guisim\GUIE3Collector.cpp ..\..\..\src\guisim\GUIEdge.cpp ..\..\..\src\guisim\GUIEventControl.cpp ..\..\..\src\guisim\GUIInductLoop.cpp ..\..\..\src\guisim\GUIJunctionWrapper.cpp ..\..\..\src\guisim\GUILane.cpp ..\..\..\src\guisim\GUILaneSpeedTrigger.cpp ..\..\..\src\guisim\GUINet.cpp ..\..\..\src\guisim\GUITrafficLightLogicWrapper.cpp ..\..\..\src\guisim\GUITriggeredRerouter.cpp ..\..\..\src\guisim\GUIVehicle.cpp ..\..\..\src\guisim\GUIVehicleControl.cpp
+         GUIBaseVehicle.cpp
+         GUICalibrator.cpp
+         GUIChargingStation.cpp
+         GUIContainer.cpp
+         GUIContainerStop.cpp
+         GUIInstantInductLoop.cpp
+         GUIPerson.cpp
+         GUITransportableControl.cpp
+         GUI_E2_ZS_Collector.cpp
+         GUI_E2_ZS_CollectorOverLanes.cpp
+         GUIBusStop.cpp
+         GUIDetectorWrapper.cpp
+         GUIE3Collector.cpp
+         GUIEdge.cpp
+         GUIEventControl.cpp
+         GUIInductLoop.cpp
+         GUIJunctionWrapper.cpp
+         GUILane.cpp
+         GUILaneSpeedTrigger.cpp
+         GUINet.cpp
+         Generating Code...
+         Compiling...
+         GUITrafficLightLogicWrapper.cpp
+         GUITriggeredRerouter.cpp
+         GUIVehicle.cpp
+         GUIVehicleControl.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\y_libguisim.lib" /NOLOGO /NODEFAULTLIB Debug\GUIBaseVehicle.obj
+         Debug\GUICalibrator.obj
+         Debug\GUIChargingStation.obj
+         Debug\GUIContainer.obj
+         Debug\GUIContainerStop.obj
+         Debug\GUIInstantInductLoop.obj
+         Debug\GUIPerson.obj
+         Debug\GUITransportableControl.obj
+         Debug\GUI_E2_ZS_Collector.obj
+         Debug\GUI_E2_ZS_CollectorOverLanes.obj
+         Debug\GUIBusStop.obj
+         Debug\GUIDetectorWrapper.obj
+         Debug\GUIE3Collector.obj
+         Debug\GUIEdge.obj
+         Debug\GUIEventControl.obj
+         Debug\GUIInductLoop.obj
+         Debug\GUIJunctionWrapper.obj
+         Debug\GUILane.obj
+         Debug\GUILaneSpeedTrigger.obj
+         Debug\GUINet.obj
+         Debug\GUITrafficLightLogicWrapper.obj
+         Debug\GUITriggeredRerouter.obj
+         Debug\GUIVehicle.obj
+         Debug\GUIVehicleControl.obj
+         y_libguisim.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libguisim\Debug\y_libguisim.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libguisim\y_libguisim.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:02:39.30

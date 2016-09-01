@@ -1,0 +1,26 @@
+﻿Build started 9/1/2016 7:57:19 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_lcmodels\z_libmicrosim_lcmodels.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\microsim\lcmodels\MSAbstractLaneChangeModel.cpp ..\..\..\src\microsim\lcmodels\MSLCM_DK2008.cpp ..\..\..\src\microsim\lcmodels\MSLCM_JE2013.cpp ..\..\..\src\microsim\lcmodels\MSLCM_LC2013.cpp ..\..\..\src\microsim\lcmodels\MSLCM_SL2015.cpp
+         MSAbstractLaneChangeModel.cpp
+         MSLCM_DK2008.cpp
+         MSLCM_JE2013.cpp
+         MSLCM_LC2013.cpp
+         MSLCM_SL2015.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libmicrosim_lcmodels.lib" /NOLOGO Debug\MSAbstractLaneChangeModel.obj
+         Debug\MSLCM_DK2008.obj
+         Debug\MSLCM_JE2013.obj
+         Debug\MSLCM_LC2013.obj
+         Debug\MSLCM_SL2015.obj
+         z_libmicrosim_lcmodels.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_lcmodels\Debug\z_libmicrosim_lcmodels.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_lcmodels\z_libmicrosim_lcmodels.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:21.80

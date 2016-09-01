@@ -1,0 +1,46 @@
+﻿Build started 9/1/2016 7:56:03 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_optional_libtraciserver\z_optional_libtraciserver.vcxproj" on node 3 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\src\traci-server\TraCIServer.cpp" "..\..\..\src\traci-server\TraCIServerAPI_ArealDetector.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Edge.cpp" "..\..\..\src\traci-server\TraCIServerAPI_InductionLoop.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Junction.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Lane.cpp" "..\..\..\src\traci-server\TraCIServerAPI_MeMeDetector.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Person.cpp" "..\..\..\src\traci-server\TraCIServerAPI_POI.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Polygon.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Route.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Simulation.cpp" "..\..\..\src\traci-server\TraCIServerAPI_TLS.cpp" "..\..\..\src\traci-server\TraCIServerAPI_Vehicle.cpp" "..\..\..\src\traci-server\TraCIServerAPI_VehicleType.cpp"
+         TraCIServer.cpp
+         TraCIServerAPI_ArealDetector.cpp
+         TraCIServerAPI_Edge.cpp
+         TraCIServerAPI_InductionLoop.cpp
+         TraCIServerAPI_Junction.cpp
+         TraCIServerAPI_Lane.cpp
+         TraCIServerAPI_MeMeDetector.cpp
+         TraCIServerAPI_Person.cpp
+         TraCIServerAPI_POI.cpp
+         TraCIServerAPI_Polygon.cpp
+         TraCIServerAPI_Route.cpp
+         TraCIServerAPI_Simulation.cpp
+         TraCIServerAPI_TLS.cpp
+         TraCIServerAPI_Vehicle.cpp
+         TraCIServerAPI_VehicleType.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_optional_libtraciserver.lib" /NOLOGO Debug\TraCIServer.obj
+         Debug\TraCIServerAPI_ArealDetector.obj
+         Debug\TraCIServerAPI_Edge.obj
+         Debug\TraCIServerAPI_InductionLoop.obj
+         Debug\TraCIServerAPI_Junction.obj
+         Debug\TraCIServerAPI_Lane.obj
+         Debug\TraCIServerAPI_MeMeDetector.obj
+         Debug\TraCIServerAPI_Person.obj
+         Debug\TraCIServerAPI_POI.obj
+         Debug\TraCIServerAPI_Polygon.obj
+         Debug\TraCIServerAPI_Route.obj
+         Debug\TraCIServerAPI_Simulation.obj
+         Debug\TraCIServerAPI_TLS.obj
+         Debug\TraCIServerAPI_Vehicle.obj
+         Debug\TraCIServerAPI_VehicleType.obj
+         z_optional_libtraciserver.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_optional_libtraciserver\Debug\z_optional_libtraciserver.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_optional_libtraciserver\z_optional_libtraciserver.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:05.97

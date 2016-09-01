@@ -1,0 +1,35 @@
+﻿Build started 9/1/2016 7:56:36 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_div\z_libutils_gui_div.vcxproj" on node 4 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\utils\gui\div\GLHelper.cpp ..\..\..\src\utils\gui\div\GUIDialog_GLChosenEditor.cpp ..\..\..\src\utils\gui\div\GUIGlobalSelection.cpp ..\..\..\src\utils\gui\div\GUIIOGlobals.cpp ..\..\..\src\utils\gui\div\GUIMessageWindow.cpp ..\..\..\src\utils\gui\div\GUIParam_PopupMenu.cpp ..\..\..\src\utils\gui\div\GUIParameterTableWindow.cpp ..\..\..\src\utils\gui\div\GUISelectedStorage.cpp ..\..\..\src\utils\gui\div\GUIUserIO.cpp
+         GLHelper.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\utils\gui\div\glhelper.cpp(109): warning C4389: '!=' : signed/unsigned mismatch
+         GUIDialog_GLChosenEditor.cpp
+         GUIGlobalSelection.cpp
+         GUIIOGlobals.cpp
+         GUIMessageWindow.cpp
+         GUIParam_PopupMenu.cpp
+         GUIParameterTableWindow.cpp
+         GUISelectedStorage.cpp
+         GUIUserIO.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\z_libutils_gui_div.lib" /NOLOGO Debug\GLHelper.obj
+         Debug\GUIDialog_GLChosenEditor.obj
+         Debug\GUIGlobalSelection.obj
+         Debug\GUIIOGlobals.obj
+         Debug\GUIMessageWindow.obj
+         Debug\GUIParam_PopupMenu.obj
+         Debug\GUIParameterTableWindow.obj
+         Debug\GUISelectedStorage.obj
+         Debug\GUIUserIO.obj
+         z_libutils_gui_div.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_div\Debug\z_libutils_gui_div.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_div\z_libutils_gui_div.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:47.37

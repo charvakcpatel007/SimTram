@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <XERCES>C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2</XERCES>
+    <PROJ_GDAL>C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2</PROJ_GDAL>
+    <FOX16>C:\Users\Asus\Desktop\Minor\fox-1.6.50</FOX16>
+    <OSG>$(OSG)</OSG>
+    <FFMPEG>$(FFMPEG)</FFMPEG>
+    <PYTHON_LIB_DIR>C:\Python27\libs</PYTHON_LIB_DIR>
+    <PYTHON_INCLUDE_DIR>C:\Python27\include</PYTHON_INCLUDE_DIR>
+    <XERCES_64>$(XERCES_64)</XERCES_64>
+    <PROJ_GDAL_64>$(PROJ_GDAL_64)</PROJ_GDAL_64>
+    <FOX16_64>$(FOX16_64)</FOX16_64>
+    <OSG_64>$(OSG_64)</OSG_64>
+    <FFMPEG_64>$(FFMPEG_64)</FFMPEG_64>
+    <PYTHON_64_LIB_DIR></PYTHON_64_LIB_DIR>
+    <PYTHON_64_INCLUDE_DIR></PYTHON_64_INCLUDE_DIR>
+  </PropertyGroup>
+</Project>

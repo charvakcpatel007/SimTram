@@ -1,0 +1,96 @@
+﻿Build started 9/1/2016 7:51:56 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmicrosim\y_libmicrosim.vcxproj" on node 4 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\microsim\MSBaseVehicle.cpp ..\..\..\src\microsim\MSCModel_NonInteracting.cpp ..\..\..\src\microsim\MSContainer.cpp ..\..\..\src\microsim\MSEdge.cpp ..\..\..\src\microsim\MSEdgeControl.cpp ..\..\..\src\microsim\MSEdgeWeightsStorage.cpp ..\..\..\src\microsim\MSEventControl.cpp ..\..\..\src\microsim\MSFrame.cpp ..\..\..\src\microsim\MSInsertionControl.cpp ..\..\..\src\microsim\MSGlobals.cpp ..\..\..\src\microsim\MSInternalJunction.cpp ..\..\..\src\microsim\MSJunction.cpp ..\..\..\src\microsim\MSJunctionControl.cpp ..\..\..\src\microsim\MSJunctionLogic.cpp ..\..\..\src\microsim\MSLane.cpp ..\..\..\src\microsim\MSLaneChanger.cpp ..\..\..\src\microsim\MSLaneChangerSublane.cpp ..\..\..\src\microsim\MSLeaderInfo.cpp ..\..\..\src\microsim\MSLink.cpp ..\..\..\src\microsim\MSLinkCont.cpp ..\..\..\src\microsim\MSLogicJunction.cpp ..\..\..\src\microsim\MSMoveReminder.cpp ..\..\..\src\microsim\MSNet.cpp ..\..\..\src\microsim\MSNoLogicJunction.cpp ..\..\..\src\microsim\MSRightOfWayJunction.cpp ..\..\..\src\microsim\MSRoute.cpp ..\..\..\src\microsim\MSRouteHandler.cpp ..\..\..\src\microsim\MSStateHandler.cpp ..\..\..\src\microsim\MSStoppingPlace.cpp ..\..\..\src\microsim\MSTransportable.cpp ..\..\..\src\microsim\MSTransportableControl.cpp ..\..\..\src\microsim\MSVehicle.cpp ..\..\..\src\microsim\MSVehicleContainer.cpp ..\..\..\src\microsim\MSVehicleControl.cpp ..\..\..\src\microsim\MSVehicleTransfer.cpp ..\..\..\src\microsim\MSVehicleType.cpp
+         MSBaseVehicle.cpp
+         MSCModel_NonInteracting.cpp
+         MSContainer.cpp
+         MSEdge.cpp
+         MSEdgeControl.cpp
+         MSEdgeWeightsStorage.cpp
+         MSEventControl.cpp
+         MSFrame.cpp
+         MSInsertionControl.cpp
+         MSGlobals.cpp
+         MSInternalJunction.cpp
+         MSJunction.cpp
+         MSJunctionControl.cpp
+         MSJunctionLogic.cpp
+         MSLane.cpp
+         MSLaneChanger.cpp
+         MSLaneChangerSublane.cpp
+         MSLeaderInfo.cpp
+         MSLink.cpp
+         MSLinkCont.cpp
+         Generating Code...
+         Compiling...
+         MSLogicJunction.cpp
+         MSMoveReminder.cpp
+         MSNet.cpp
+         MSNoLogicJunction.cpp
+         MSRightOfWayJunction.cpp
+         MSRoute.cpp
+         MSRouteHandler.cpp
+         MSStateHandler.cpp
+         MSStoppingPlace.cpp
+         MSTransportable.cpp
+         MSTransportableControl.cpp
+         MSVehicle.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\msvehicle.cpp(1245): warning C4127: conditional expression is constant
+         MSVehicleContainer.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\msvehiclecontainer.cpp(148): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\msvehiclecontainer.cpp(151): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\msvehiclecontainer.cpp(211): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\msvehiclecontainer.cpp(220): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\microsim\msvehiclecontainer.cpp(226): warning C4018: '>' : signed/unsigned mismatch
+         MSVehicleControl.cpp
+         MSVehicleTransfer.cpp
+         MSVehicleType.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\y_libmicrosim.lib" /NOLOGO Debug\MSBaseVehicle.obj
+         Debug\MSCModel_NonInteracting.obj
+         Debug\MSContainer.obj
+         Debug\MSEdge.obj
+         Debug\MSEdgeControl.obj
+         Debug\MSEdgeWeightsStorage.obj
+         Debug\MSEventControl.obj
+         Debug\MSFrame.obj
+         Debug\MSInsertionControl.obj
+         Debug\MSGlobals.obj
+         Debug\MSInternalJunction.obj
+         Debug\MSJunction.obj
+         Debug\MSJunctionControl.obj
+         Debug\MSJunctionLogic.obj
+         Debug\MSLane.obj
+         Debug\MSLaneChanger.obj
+         Debug\MSLaneChangerSublane.obj
+         Debug\MSLeaderInfo.obj
+         Debug\MSLink.obj
+         Debug\MSLinkCont.obj
+         Debug\MSLogicJunction.obj
+         Debug\MSMoveReminder.obj
+         Debug\MSNet.obj
+         Debug\MSNoLogicJunction.obj
+         Debug\MSRightOfWayJunction.obj
+         Debug\MSRoute.obj
+         Debug\MSRouteHandler.obj
+         Debug\MSStateHandler.obj
+         Debug\MSStoppingPlace.obj
+         Debug\MSTransportable.obj
+         Debug\MSTransportableControl.obj
+         Debug\MSVehicle.obj
+         Debug\MSVehicleContainer.obj
+         Debug\MSVehicleControl.obj
+         Debug\MSVehicleTransfer.obj
+         Debug\MSVehicleType.obj
+         y_libmicrosim.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmicrosim\Debug\y_libmicrosim.lib
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmicrosim\y_libmicrosim.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:02:33.37

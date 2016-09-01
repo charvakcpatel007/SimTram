@@ -1,0 +1,65 @@
+﻿Build started 9/1/2016 7:57:41 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\guisim\guisim.vcxproj" on node 5 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\guisim_main.cpp
+         guisim_main.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /l"0x0409" /nologo /fo"Debug\guisim.res" ..\..\..\src\guisim.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\sumo-guiD.exe" /NOLOGO "C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\lib\proj_i.lib" "C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\lib\gdal_i.lib" shell32.lib opengl32.lib glu32.lib "C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\lib\xerces-c_3D.lib" "C:\Users\Asus\Desktop\Minor\fox-1.6.50\lib\FOXDLLD-1.6.lib" user32.lib winmm.lib vfw32.lib gdi32.lib ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\sumo-guiD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\sumo-guiD.lib" /MACHINE:X86 /SAFESEH Debug\guisim.res
+         Debug\guisim_main.obj
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libguinetload\Debug\y_libguinetload.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libguisim\Debug\y_libguisim.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libgui\Debug\y_libgui.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmesogui\Debug\y_libmesogui.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmesosim\Debug\y_libmesosim.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libmicrosim\Debug\y_libmicrosim.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_libnetload\Debug\y_libnetload.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_osgview\Debug\y_osgview.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_nvwa\Debug\zz_foreign_nvwa.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_phemlight\Debug\zz_foreign_phemlight.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_polyfonts\Debug\zz_foreign_polyfonts.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_gl2ps\Debug\zz_foreign_gl2ps.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_tcpip\Debug\zz_foreign_tcpip.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libgui_dialogs\Debug\z_libgui_dialogs.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_actions\Debug\z_libmicrosim_actions.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_cfmodels\Debug\z_libmicrosim_cfmodels.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_devices\Debug\z_libmicrosim_devices.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_lcmodels\Debug\z_libmicrosim_lcmodels.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_output\Debug\z_libmicrosim_output.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_pedestrians\Debug\z_libmicrosim_pedestrians.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_traffic_lights\Debug\z_libmicrosim_traffic_lights.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libmicrosim_trigger\Debug\z_libmicrosim_trigger.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_common\Debug\z_libutils_common.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_emissions\Debug\z_libutils_emissions.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_foxtools\Debug\z_libutils_foxtools.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_geom\Debug\z_libutils_geom.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_div\Debug\z_libutils_gui_div.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_globjects\Debug\z_libutils_gui_globjects.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_images\Debug\z_libutils_gui_images.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_settings\Debug\z_libutils_gui_settings.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_tracker\Debug\z_libutils_gui_tracker.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_gui_windows\Debug\z_libutils_gui_windows.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_importio\Debug\z_libutils_importio.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_iodevices\Debug\z_libutils_iodevices.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_options\Debug\z_libutils_options.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_vehicle\Debug\z_libutils_vehicle.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_xml\Debug\z_libutils_xml.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_optional_libtraciserver\Debug\z_optional_libtraciserver.lib
+     1>guisim_main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+            Creating library Debug\sumo-guiD.lib and object Debug\sumo-guiD.exp
+         guisim.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\guisim\Debug\sumo-guiD.exe
+       PostBuildEvent:
+         xcopy /Y C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\guisim\Debug\sumo-guiD.exe ..\..\..\bin\
+         :VCEnd
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\guisim\Debug\sumo-guiD.exe
+         1 File(s) copied
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\guisim\guisim.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:44.04

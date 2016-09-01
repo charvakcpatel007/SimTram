@@ -1,0 +1,61 @@
+﻿Build started 9/1/2016 7:58:42 PM.
+     1>Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\dfrouter\dfrouter.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\..\..\tools\build\version.py
+         :VCEnd
+         unknown revision - svn dir 'None' not found
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\include" /I..\..\..\src /I..\..\..\src\foreign\msinttypes /I"C:\Users\Asus\Desktop\Minor\fox-1.6.50\include" /I"C:\Users\Asus\Desktop\Minor\release-1800-gdal-1-11-3-mapserver-6-4-2\include" /ZI /nologo /W4 /WX- /Od /Oy- /D "HAVE_ENABLED=\"Win32 Debug PROJ GDAL GUI Python\"" /D HAVE_FOX /D HAVE_PROJ /D HAVE_GDAL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /fp:except /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\dfrouter\dfrouter_main.cpp ..\..\..\src\dfrouter\RODFDetector.cpp ..\..\..\src\dfrouter\RODFDetectorFlow.cpp ..\..\..\src\dfrouter\RODFDetectorHandler.cpp ..\..\..\src\dfrouter\RODFDetFlowLoader.cpp ..\..\..\src\dfrouter\RODFEdge.cpp ..\..\..\src\dfrouter\RODFEdgeBuilder.cpp ..\..\..\src\dfrouter\RODFFrame.cpp ..\..\..\src\dfrouter\RODFNet.cpp ..\..\..\src\dfrouter\RODFRouteCont.cpp
+         dfrouter_main.cpp
+         RODFDetector.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfdetector.cpp(329): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfdetector.cpp(448): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfdetector.cpp(875): warning C4389: '==' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfdetector.cpp(881): warning C4389: '==' : signed/unsigned mismatch
+         RODFDetectorFlow.cpp
+         RODFDetectorHandler.cpp
+         RODFDetFlowLoader.cpp
+         RODFEdge.cpp
+         RODFEdgeBuilder.cpp
+         RODFFrame.cpp
+         RODFNet.cpp
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfnet.cpp(760): warning C4389: '==' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfnet.cpp(801): warning C4389: '!=' : signed/unsigned mismatch
+     1>c:\users\asus\desktop\minor\simtram\src\dfrouter\rodfnet.cpp(803): warning C4389: '==' : signed/unsigned mismatch
+         RODFRouteCont.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\dfrouterD.exe" /NOLOGO "C:\Users\Asus\Desktop\Minor\xerces-c-3.1.2\lib\xerces-c_3D.lib" "C:\Users\Asus\Desktop\Minor\fox-1.6.50\lib\FOXDLLD-1.6.lib" ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\dfrouterD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\dfrouterD.lib" /MACHINE:X86 /SAFESEH Debug\dfrouter_main.obj
+         Debug\RODFDetector.obj
+         Debug\RODFDetectorFlow.obj
+         Debug\RODFDetectorHandler.obj
+         Debug\RODFDetFlowLoader.obj
+         Debug\RODFEdge.obj
+         Debug\RODFEdgeBuilder.obj
+         Debug\RODFFrame.obj
+         Debug\RODFNet.obj
+         Debug\RODFRouteCont.obj
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\y_librouter\Debug\y_librouter.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_nvwa\Debug\zz_foreign_nvwa.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_phemlight\Debug\zz_foreign_phemlight.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\zz_foreign_tcpip\Debug\zz_foreign_tcpip.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_common\Debug\z_libutils_common.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_emissions\Debug\z_libutils_emissions.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_geom\Debug\z_libutils_geom.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_importio\Debug\z_libutils_importio.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_iodevices\Debug\z_libutils_iodevices.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_options\Debug\z_libutils_options.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_vehicle\Debug\z_libutils_vehicle.lib
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\z_libutils_xml\Debug\z_libutils_xml.lib
+     1>dfrouter_main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         dfrouter.vcxproj -> C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\dfrouter\Debug\dfrouterD.exe
+       PostBuildEvent:
+         xcopy /Y C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\dfrouter\Debug\dfrouterD.exe ..\..\..\bin\
+         :VCEnd
+         C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\dfrouter\Debug\dfrouterD.exe
+         1 File(s) copied
+     1>Done Building Project "C:\Users\Asus\Desktop\Minor\SimTram\build\msvc10\dfrouter\dfrouter.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:43.05
