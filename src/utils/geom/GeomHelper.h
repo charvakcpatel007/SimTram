@@ -95,7 +95,7 @@ public:
     /** @brief Returns the distance of second angle from first angle clockwise
      * @param[in] angle1 The first angle
      * @param[in] angle2 The second angle
-     * @return Angle (clockwise) starting from first to second angle
+     * @return Angle (clockwise) starti	ng from first to second angle
      */
     static SUMOReal getCWAngleDiff(SUMOReal angle1, SUMOReal angle2);
 
@@ -112,7 +112,7 @@ public:
      *
      * The results are always between -pi and pi.
      * Positive values denote that the second angle is counter clockwise closer, negative values mean
-     * it is clockwise closer.
+     * it is clockwise closer.	
      * @param[in] angle1 The first angle
      * @param[in] angle2 The second angle
      * @return angle starting from first to second angle
@@ -136,6 +136,55 @@ public:
      */
     static SUMOReal legacyDegree(const SUMOReal angle, const bool positive = false);
 
+
+	/*
+	 * Old functions that were present in SimTram
+	 * These function may be moved to other files in new version but for compatibiliy reasons it is again added here 
+	 */
+	static bool intersects(SUMOReal x1b, SUMOReal y1b, SUMOReal x1e, SUMOReal y1e,
+		SUMOReal x2b, SUMOReal y2b, SUMOReal x2e, SUMOReal y2e);
+
+	static bool intersects(const Position &p11, const Position &p12,
+		const Position &p21, const Position &p22);
+
+	static Position intersection_position(const Position &p11,
+		const Position &p12, const Position &p21, const Position &p22);
+
+	static SUMOReal Angle2D(SUMOReal x1, SUMOReal y1, SUMOReal x2, SUMOReal y2);
+
+	static Position interpolate(const Position &p1,
+		const Position &p2, SUMOReal length);
+
+	static Position extrapolate_first(const Position &p1,
+		const Position &p2, SUMOReal length);
+
+	static Position extrapolate_second(const Position &p1,
+		const Position &p2, SUMOReal length);
+
+	/** by Damian Coventry */
+	static SUMOReal distancePointLine(const Position &point,
+		const Position &lineStart, const Position &lineEnd);
+
+	static SUMOReal closestDistancePointLine(const Position &point,
+		const Position &lineStart, const Position &lineEnd,
+		Position& outIntersection);
+
+	static Position transfer_to_side(Position &p,
+		const Position &lineBeg, const Position &lineEnd,
+		SUMOReal amount);
+
+	static std::pair<SUMOReal, SUMOReal> getNormal90D_CW(const Position &beg,
+		const Position &end, SUMOReal length, SUMOReal wanted_offset);
+
+	static std::pair<SUMOReal, SUMOReal> getNormal90D_CW(const Position &beg,
+		const Position &end, SUMOReal wanted_offset);
+
+	/** @brief Returns the maximum distance (clockwise/counter-clockwise) between both angles
+	* @param[in] angle1 The first angle
+	* @param[in] angle2 The second angle
+	* @return The maximum distance between both angles
+	*/
+	static SUMOReal getMaxAngleDiff(SUMOReal angle1, SUMOReal angle2) throw();
 };
 
 
