@@ -21,7 +21,7 @@
 //
 /****************************************************************************/
 #ifndef SUMOVehicleParserHelper_h
-#define SUMOVehicleParserHelper_h
+#define SUMOVehicleParserHelper_h 
 
 
 // ===========================================================================

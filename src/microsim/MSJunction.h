@@ -1,7 +1,7 @@
 /****************************************************************************/
 /// @file    MSJunction.h
 /// @author  Christian Roessel
-/// @author  Daniel Krajzewicz
+/// @author  Daniel Krajzewicz	
 /// @author  Sascha Krieg
 /// @author  Michael Behrisch
 /// @date    Wed, 12 Dez 2001

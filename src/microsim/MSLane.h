@@ -112,8 +112,7 @@ public:
             myI1End(i1End),
             myI2End(i2End),
             myDownstream(downstream),
-            myDirection(downstream ? 1 : -1) {
-        }
+            myDirection(downstream ? 1 : -1) {}
 
         bool operator== (AnyVehicleIterator const& other) const {
             return (myI1 == other.myI1
@@ -201,7 +200,7 @@ public:
      */
     void addLink(MSLink* link);
 
-    /** @brief Adds a neighbor to this lane
+    /** @brief Adds a neighbor to this lane 
      *
      * @param[in] id The lane's id
      */
@@ -269,7 +268,7 @@ public:
      * @param[in] recheckNextLanes Forces patching the speed for not being too fast on next lanes
      * @param[in] notification The cause of insertion (i.e. departure, teleport, parking) defaults to departure
      * @return Whether the vehicle could be inserted
-     * @see MSVehicle::enterLaneAtInsertion
+     * @see MSVehicle::enterLaneAtInsertion	
      */
     bool isInsertionSuccess(MSVehicle* vehicle, SUMOReal speed, SUMOReal pos, SUMOReal posLat,
                             bool recheckNextLanes,
