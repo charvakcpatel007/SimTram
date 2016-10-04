@@ -48,11 +48,14 @@
 #include "MSLinkCont.h"
 #include "MSLeaderInfo.h"
 #include "MSMoveReminder.h"
+//#include "MSStrip.h"
 #ifndef NO_TRACI
 #include <traci-server/TraCIServerAPI_Lane.h>
 #endif
 
 
+class GUIGlObjectStorage;
+class MSEdgeControl;
 // ===========================================================================
 // class declarations
 // ===========================================================================
@@ -64,6 +67,13 @@ class MSVehicleTransfer;
 class MSVehicleControl;
 class OutputDevice;
 class MSLeaderInfo;
+
+/*SimTram
+ *
+ * additnal forward declarations
+ */
+class MSStripChanger;
+class MSStrip;
 
 
 // ===========================================================================
@@ -81,7 +91,7 @@ public:
     /// needs access to myTmpVehicles (this maybe should be done via double-buffering!!!)
     friend class MSLaneChanger;
     friend class MSLaneChangerSublane;
-
+	friend class GUILaneWrapper;
     friend class MSXMLRawOut;
 
     friend class MSQueueExport;
@@ -198,6 +208,8 @@ public:
      *
      * @param[in] link An outgoing link
      */
+
+	void initialize(MSLinkCont* succs);
     void addLink(MSLink* link);
 
     /** @brief Adds a neighbor to this lane 
@@ -206,7 +218,11 @@ public:
      */
     void addNeigh(const std::string& id);
     ///@}
+	/// @name interaction with MSMoveReminder
+	/// @{
 
+	/// @brief Definition of a container for move reminder
+	typedef std::vector< MSMoveReminder* > MoveReminderCont;
 
 
     /// @name interaction with MSMoveReminder
@@ -272,7 +288,7 @@ public:
      */
     bool isInsertionSuccess(MSVehicle* vehicle, SUMOReal speed, SUMOReal pos, SUMOReal posLat,
                             bool recheckNextLanes,
-                            MSMoveReminder::Notification notification);
+							MSMoveReminder::Notification notification, size_t startStripId = 0);
 
     bool checkFailure(MSVehicle* aVehicle, SUMOReal& speed, SUMOReal& dist, const SUMOReal nspeed, const bool patchSpeed, const std::string errorMsg) const;
     bool lastInsertion(MSVehicle& veh, SUMOReal mspeed);
@@ -313,10 +329,35 @@ public:
      */
     virtual SUMOReal setPartialOccupation(MSVehicle* v);
 
+	/** @brief Sets the information about a vehicle lapping into this lane
+	*
+	* The given left length of vehicle which laps into this lane is used
+	*  to determine the vehicle's end position in regard to this lane's length.
+	* This information is set into myInlappingVehicleState; additionally, the
+	*  vehicle pointer is stored in myInlappingVehicle;
+	* Returns this lane's length for subtracting it from the left vehicle length.
+	* @param[in] v The vehicle which laps into this lane
+	* @param[in] leftVehicleLength The distance the vehicle laps into this lane
+	* @return This lane's length
+	*/
+	SUMOReal setPartialOccupation(MSVehicle *v, SUMOReal leftVehicleLength) throw();
+
     /** @brief Removes the information about a vehicle lapping into this lane
      * @param[in] v The vehicle which laps into this lane
      */
     virtual void resetPartialOccupation(MSVehicle* v);
+
+	/** @brief Returns the vehicle which laps into this lane
+	* @return The vehicle which laps into this lane, 0 if there is no such
+	*/
+	MSVehicle *getPartialOccupator(unsigned int startStrip = 0, unsigned int endStrip = 0) const throw();
+
+	/** @brief Returns the position of the in-lapping vehicle's end
+	* @return Information about how far the vehicle laps into this lane
+	*/
+	SUMOReal getPartialOccupatorEnd(unsigned int startStrip = 0, unsigned int endStrip = 0) const throw();
+
+
 
     /** @brief Returns the last vehicles on the lane
      *
@@ -332,6 +373,18 @@ public:
 
     /// @brief analogue to getLastVehicleInformation but in the upstream direction
     const MSLeaderInfo& getFirstVehicleInformation(const MSVehicle* ego, SUMOReal latOffset, bool onlyFrontOnLane, SUMOReal maxPos = std::numeric_limits<SUMOReal>::max(), bool allowCached = true) const;
+
+
+	/** @brief Returns the last vehicle which is still on the lane
+	*
+	* The information about the last vehicle in this lane's que is returned.
+	*  If there is no such vehicle, the information about the vehicle which
+	*  laps into this lane is returned. If there is no such vehicle, the first
+	*  returned member is 0.
+	* @return Information about the last vehicle and it's back position
+	*/
+	std::pair<MSVehicle*, SUMOReal> getLastVehicleInformation() const throw();
+	/// @}
 
     /// @}
 
@@ -374,6 +427,12 @@ public:
     virtual const VehCont& getVehiclesSecure() const {
         return myVehicles;
     }
+
+	//?? ACE ?? only for gui
+	virtual const VehCont &getVehiclesSecure(int i) const throw()
+	{
+		return myStrips[i]->getVehiclesSecure();
+	}
 
 
     /// @brief begin iterator for iterating over all vehicles touching this lane in downstream direction
@@ -483,6 +542,11 @@ public:
         return myPermissions;
     }
 
+	virtual bool moveCritical(SUMOTime t);
+
+	/** Moves the critical vehicles
+	This step is done after the responds have been set */
+	virtual bool setCritical(SUMOTime t, std::vector<MSLane*> &into);
 
     /** @brief Returns the lane's width
      * @return This lane's width
@@ -649,7 +713,17 @@ public:
         partial occupation*/
     bool isEmpty() const;
 
-    /// @brief returns the last vehicle for which this lane is responsible or 0
+	/// returns the last vehicle
+	virtual MSVehicle* const getLastVehicle(const MSVehicle::StripCont& strips) const;
+
+	virtual const MSVehicle * const getFirstVehicle() const;
+
+	void init(MSEdgeControl &, std::vector<MSLane*>::const_iterator firstNeigh, std::vector<MSLane*>::const_iterator lastNeigh);
+
+	// valid for gui-version only
+	virtual GUILaneWrapper *buildLaneWrapper(GUIGlObjectStorage &idStorage);
+
+	/// @brief returns the last vehicle for which this lane is responsible or 0
     MSVehicle* getLastFullVehicle() const;
 
     /// @brief returns the first vehicle for which this lane is responsible or 0
@@ -661,6 +735,7 @@ public:
     /// @brief returns the first vehicle that is fully or partially on this lane
     MSVehicle* getFirstAnyVehicle() const;
 
+	virtual MSVehicle *removeFirstVehicle();
     /* @brief remove the vehicle from this lane
      * @param[notify] whether moveReminders of the vehicle shall be triggered
      */
@@ -668,6 +743,9 @@ public:
 
     void leftByLaneChange(MSVehicle* v);
     void enteredByLaneChange(MSVehicle* v);
+
+	MSLane * const getLeftLane() const;
+	MSLane * const getRightLane() const;
 
     /** @brief Returns the lane with the given offset parallel to this one or 0 if it does not exist
      * @param[in] offset The offset of the result lane
@@ -1047,7 +1125,7 @@ protected:
     /** @brief Container for lane-changing vehicles. After completion of lane-change-
         process, the containers will be swapped with myVehicles. */
     VehCont myTmpVehicles;
-
+	SUMOReal myBackDistance;
     /** @brief Buffer for vehicles that moved from their previous lane onto this one.
      * Integrated after all vehicles executed their moves*/
     VehCont myVehBuffer;
@@ -1068,6 +1146,12 @@ protected:
     /// The vClass permissions for this lane
     SVCPermissions myPermissions;
 
+	/// @brief The lane left to the described lane (==lastNeigh if none)
+	std::vector<MSLane*>::const_iterator myFirstNeigh;
+
+	/// @brief The end of this lane's edge's lane container
+	std::vector<MSLane*>::const_iterator myLastNeigh;
+
     /// The vClass speed restrictions for this lane
     const std::map<SUMOVehicleClass, SUMOReal>* myRestrictions;
 
@@ -1080,11 +1164,12 @@ protected:
 
     /// @brief The current length of all vehicles on this lane, excluding their minGaps
     SUMOReal myNettoVehicleLengthSum;
+public:
 
     /** The lane's Links to it's succeeding lanes and the default
         right-of-way rule, i.e. blocked or not blocked. */
     MSLinkCont myLinks;
-
+protected:
     std::map<MSEdge*, std::vector<MSLane*> > myApproachingLanes;
 
     /// @brief leaders on all sublanes as seen by approaching vehicles (cached)
@@ -1211,6 +1296,30 @@ private:
     /// @brief invalidated assignment operator
     MSLane& operator=(const MSLane&);
 
+	/*SimTram
+	 * Additonal Methods
+	 */
+public:
+	/** Container for the strips of a lane */
+	typedef std::vector<MSStrip *> StripCont;
+	typedef StripCont::iterator StripContIter;
+	typedef StripCont::const_iterator StripContConstIter;
+	StripCont myStrips;////temporary call by function ashu 20 december
+
+	MSStrip *getStrip(int numericalID) const throw() {
+		return myStrips.at(numericalID);
+	}
+
+	//returns the strips of a lane //AB 2011
+	StripCont getMyStrips()
+	{
+		return myStrips;
+	}
+protected:
+	/** @brief Looks at possible placement of a vehicle of given width
+	* and returns the start strip ID where placement is most advantageous
+	*/
+	size_t getEmptyStartStripID(size_t vehWidth) const;
 
 };
 

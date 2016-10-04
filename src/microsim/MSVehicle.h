@@ -145,7 +145,9 @@ public:
 
     };
 
-
+	typedef std::vector<MSStrip *> StripCont;
+	typedef std::vector<MSStrip *>::iterator StripContIter;
+	typedef std::vector<MSStrip *>::const_iterator StripContConstIter;
     /** @class WaitingTimeCollector
      * @brief Stores the waiting intervals over the previous seconds (memory is to be specified in ms.).
      */

@@ -184,6 +184,11 @@ MSLane::~MSLane() {
     }
 }
 
+void MSLane::initialize(MSLinkCont* links)
+{
+	myLinks = *links;
+	delete links;
+}
 
 void
 MSLane::addLink(MSLink* link) {
@@ -219,6 +224,23 @@ MSLane::setPartialOccupation(MSVehicle* v) {
     return myLength;
 }
 
+double MSLane::setPartialOccupation(MSVehicle* v, double leftVehicleLength) throw()
+{
+	myInlappingVehicle = v;
+	if (leftVehicleLength>myLength) {
+		myInlappingVehicleEnd = 0;
+	}
+	else {
+		myInlappingVehicleEnd = myLength-leftVehicleLength;
+	}
+	return myLength;
+	assert (v != 0);
+	MSVehicle::StripCont strips = v->getStrips();
+	MSVehicle::StripCont::iterator it = strips.begin();
+	for (; it != strips.end(); ++it) {
+		(*it)->setPartialOccupation(v, leftVehicleLength);
+	}
+}
 
 void
 MSLane::resetPartialOccupation(MSVehicle* v) {
@@ -238,6 +260,32 @@ MSLane::resetPartialOccupation(MSVehicle* v) {
     assert(false);
 }
 
+MSVehicle *
+MSLane::getPartialOccupator(unsigned int startStrip, unsigned int endStrip) const throw() {
+	if (endStrip == 0) endStrip = myStrips.size() - 1;
+	assert(startStrip <= endStrip && startStrip >= 0 && endStrip < myStrips.size());
+	//XXX: what if vehicle is on two lanes at a time
+	MSVehicle *last = 0;
+	SUMOReal min = myStrips.at(startStrip)->getPartialOccupatorEnd();
+	for (unsigned int strip = startStrip; strip <= endStrip; ++strip) {
+		SUMOReal curr = myStrips.at(strip)->getPartialOccupatorEnd();
+		if (curr < min) {
+			min = curr;
+			last = myStrips.at(strip)->getPartialOccupator();
+		}
+	}
+	//printDebugMsg();
+	//std::cerr<<"Partial Occupator b/w "<<startStrip<<" and "<<endStrip<<" is: "<<(last != 0 ? last->getID() : "0");
+	//return last;
+	return myInlappingVehicle;
+}
+
+SUMOReal
+MSLane::getPartialOccupatorEnd(unsigned int startStrip, unsigned int endStrip) const throw() {
+	//MSVehicle *partialOcc = getPartialOccupator(startStrip, endStrip);
+	//return partialOcc->getMainStrip().getPartialOccupatorEnd();
+	return myInlappingVehicleEnd;
+}
 
 // ------ Vehicle emission ------
 void
@@ -400,6 +448,7 @@ MSLane::insertVehicle(MSVehicle& veh) {
     SUMOReal posLat = 0;
     bool patchSpeed = true; // whether the speed shall be adapted to infrastructure/traffic in front
     const SUMOVehicleParameter& pars = veh.getParameter();
+	size_t stripId = getEmptyStartStripID(veh.getWidth());
     SUMOReal speed = getDepartSpeed(veh, patchSpeed);
 
     // determine the position
@@ -421,7 +470,7 @@ MSLane::insertVehicle(MSVehicle& veh) {
                         pars.departPosLatProcedure == DEPART_POSLAT_RANDOM_FREE) {
                     posLat = RandHelper::rand(getWidth() - veh.getVehicleType().getWidth()) - getWidth() * 0.5 + veh.getVehicleType().getWidth() * 0.5;
                 }
-                if (isInsertionSuccess(&veh, speed, pos, posLat, patchSpeed, MSMoveReminder::NOTIFICATION_DEPARTED)) {
+                if (isInsertionSuccess(&veh, speed, pos, posLat, patchSpeed, MSMoveReminder::NOTIFICATION_DEPARTED, stripId)) {
                     return true;
                 }
             }
@@ -451,7 +500,7 @@ MSLane::insertVehicle(MSVehicle& veh) {
             for (int i = 0; i < 10; i++) {
                 // we will try some random positions ...
                 posLat = RandHelper::rand(getWidth()) - getWidth() * 0.5;
-                if (isInsertionSuccess(&veh, speed, pos, posLat, patchSpeed, MSMoveReminder::NOTIFICATION_DEPARTED)) {
+				if (isInsertionSuccess(&veh, speed, pos, posLat, patchSpeed, MSMoveReminder::NOTIFICATION_DEPARTED, stripId)) {
                     return true;
                 }
             }
@@ -474,7 +523,7 @@ MSLane::insertVehicle(MSVehicle& veh) {
             break;
     }
     // try to insert
-    return isInsertionSuccess(&veh, speed, pos, posLat, patchSpeed, MSMoveReminder::NOTIFICATION_DEPARTED);
+	return isInsertionSuccess(&veh, speed, pos, posLat, patchSpeed, MSMoveReminder::NOTIFICATION_DEPARTED, stripId);
 }
 
 
@@ -504,13 +553,15 @@ MSLane::checkFailure(MSVehicle* aVehicle, SUMOReal& speed, SUMOReal& dist, const
 bool
 MSLane::isInsertionSuccess(MSVehicle* aVehicle,
                            SUMOReal speed, SUMOReal pos, SUMOReal posLat, bool patchSpeed,
-                           MSMoveReminder::Notification notification) {
+						   MSMoveReminder::Notification notification, size_t startStripId) {
     if (pos < 0 || pos > myLength) {
         // we may not start there
         WRITE_WARNING("Invalid departPos " + toString(pos) + " given for vehicle '" +
                       aVehicle->getID() + "'. Inserting at lane end instead.");
         pos = myLength;
     }
+	size_t endStripId = startStripId + aVehicle->getWidth() - 1;
+	assert(startStripId >= 0 && endStripId < myStrips.size());
     aVehicle->setTentativeLaneAndPosition(this, pos, posLat);
     aVehicle->updateBestLanes(false, this);
     const MSCFModel& cfModel = aVehicle->getCarFollowModel();
@@ -868,6 +919,19 @@ MSLane::getFirstVehicleInformation(const MSVehicle* ego, SUMOReal latOffset, boo
     return myFollowerInfo;
 }
 
+std::pair<MSVehicle*, SUMOReal>
+MSLane::getLastVehicleInformation() const throw() {
+	//TODO: make efficient
+	std::vector< std::pair<MSVehicle*, SUMOReal> > lastVehCont;
+	std::vector< std::pair<MSVehicle*, SUMOReal> >::iterator lastVehContIt;
+	for (StripCont::const_iterator it = myStrips.begin(); it != myStrips.end(); ++it) {
+		//MSVehicle *last = *((*it)->myVehicles.begin());
+		lastVehCont.push_back((*it)->getLastVehicleInformation());
+	}
+	std::unique(lastVehCont.begin(), lastVehCont.end(), VehInfoEqComparator());
+	lastVehContIt = std::min_element(lastVehCont.begin(), lastVehCont.end(), VehInfoLessComparator());
+	return std::make_pair(lastVehContIt->first, lastVehContIt->second);
+}
 
 // ------  ------
 void
@@ -1346,6 +1410,68 @@ MSLane::isEmpty() const {
     return myVehicles.empty() && myPartialVehicles.empty();
 }
 
+MSVehicle * const
+MSLane::getLastVehicle(const MSVehicle::StripCont &strips) const {
+	MSVehicle::StripContConstIter strip = strips.begin();
+	MSVehicle *last = 0;
+
+	while (strip != strips.end()) {
+		last = (*strip)->getLastVehicle();
+		if (last != 0) break;
+		strip++;
+	}
+	if (last == 0) return last;
+
+	for (MSVehicle::StripContConstIter it = strip + 1; it != strips.end(); ++it) {
+		MSVehicle *curr = (*it)->getLastVehicle();
+		if (!curr) continue;
+
+		if (last->getPositionOnLane() - last->getVehicleType().getLength()
+				>
+				curr->getPositionOnLane() - curr->getVehicleType().getLength())
+				last = curr;
+	}
+	//DEBUG
+	/*
+	std::pair<MSVehicle*, SUMOReal> lvInfo = getLastVehicleInformation();
+	if (last != lvInfo.first)
+	MsgHandler::getWarningInstance()->inform("LastVEH_ERR::Lane=" + this->getID() +
+	", time=" + time2string(MSNet::getInstance()->getCurrentTimeStep()) + ".");
+	*/
+	return last;
+}
+
+
+const MSVehicle * const
+MSLane::getFirstVehicle() const {
+	//XXX: partial occupators don't count?
+	StripCont::const_iterator it = myStrips.begin();
+	const MSVehicle *first = (*it)->getFirstVehicle();
+
+	for (; it != myStrips.end(); ++it) {
+		MSVehicle *curr = (*it)->getLastVehicle();
+		if (curr == 0)
+			continue;
+		else if (first == 0 && curr != 0)
+			first = curr;
+
+		if (first->getPositionOnLane() < curr->getPositionOnLane())
+			first = curr;
+	}
+	return first;
+}
+
+void
+MSLane::init(MSEdgeControl &, std::vector<MSLane*>::const_iterator firstNeigh, std::vector<MSLane*>::const_iterator lastNeigh) {
+	myFirstNeigh = firstNeigh;
+	myLastNeigh = lastNeigh;
+}
+
+GUILaneWrapper *
+MSLane::buildLaneWrapper(GUIGlObjectStorage &) {
+    throw "Only within the gui-version";
+}
+
 MSVehicle*
 MSLane::getLastFullVehicle() const {
     if (myVehicles.size() == 0) {
@@ -1391,6 +1517,14 @@ MSLane::getFirstAnyVehicle() const {
     return result;
 }
 
+MSVehicle* MSLane::removeFirstVehicle()
+{
+	MSVehicle *veh = *(myVehicles.end() - 1);
+	veh->leaveLaneAtMove(0);
+	myVehicles.erase(myVehicles.end() - 1);
+	myVehicleLengthSum -= veh->getVehicleType().getLength();
+	return veh;
+}
 
 MSLinkCont::const_iterator
 MSLane::succLinkSec(const SUMOVehicle& veh, int nRouteSuccs,
@@ -1954,6 +2088,39 @@ MSLane::enteredByLaneChange(MSVehicle* v) {
     myNettoVehicleLengthSum += v->getVehicleType().getLength();
 }
 
+MSLane * const
+MSLane::getLeftLane() const {
+	return myEdge->leftLane(this);
+}
+
+
+MSLane * const
+MSLane::getRightLane() const {
+	return myEdge->rightLane(this);
+}
+
+bool
+MSLane::moveCritical(SUMOTime t) {
+	StripContIter it = myStrips.begin();
+	bool res = true;
+	for (it; it != myStrips.end(); ++it) {
+		// returns false if there is atleast one vehicle in lane
+		bool empty = (*it)->moveCritical(t);
+		res = res && empty;
+	}
+	return res;
+	// return getVehicleNumber()==0;
+}
+
+bool
+MSLane::setCritical(SUMOTime t, std::vector<MSLane*> &into) {
+	// move critical vehicles
+	StripCont::iterator i;
+	for (i = myStrips.begin(); i != myStrips.end(); ++i) {
+		(*i)->setCritical(t, into);
+	}
+	return getVehicleNumber() == 0;
+}
 
 int
 MSLane::getCrossingIndex() const {
@@ -2528,4 +2695,53 @@ MSLane::initCollisionOptions(const OptionsCont& oc) {
 }
 
 /****************************************************************************/
+
+/*
+ * SimTram
+ * Addtional Methods
+ * 
+ */
+
+size_t
+MSLane::getEmptyStartStripID(size_t vehWidth) const {
+	StripCont::const_iterator strip = myStrips.begin();
+	std::vector<SUMOReal> vehPositions(myStrips.size(), getLength());
+	std::vector<SUMOReal>::iterator it, start, end;
+	size_t startPos = 0;
+	it = vehPositions.begin();
+
+	// vehPositions contains position of end of last vehicle of every strip
+	// or length of lane if there is no last vehicle
+	int i = 0;
+	for (i = 0; strip != myStrips.end(); ++strip, ++i) {
+		MSVehicle *veh = (*strip)->getLastVehicle();
+		if (veh != 0)
+			vehPositions[i] = veh->getPositionOnLane() - veh->getVehicleType().getLength();
+	}
+	assert(i == myStrips.size());
+
+	// for each possible position of vehicle, find the vehicle closest to current one
+	// (in all strips current vehicle occupies)
+	std::map<size_t, SUMOReal> possiblePosn;
+	std::map<size_t, SUMOReal>::iterator pos;
+	for (size_t myStart = 0; myStart <= myStrips.size() - vehWidth; ++myStart) {
+		// find min dist among all strips that vehicle may occupy
+		start = vehPositions.begin() + myStart;
+		end = start + vehWidth;
+		it = std::min_element(start, end);
+		possiblePosn[myStart] = *it;
+	}
+	// now find the maximum among the possible start positions
+	pos = possiblePosn.begin();
+	SUMOReal currMaxPos = pos->second;
+	startPos = pos->first;
+	for (; pos != possiblePosn.end(); ++pos) {
+		if (currMaxPos < pos->second) {
+			currMaxPos = pos->second;
+			startPos = pos->first;
+		}
+	}
+	//std::cerr << getID() << "::getEmptyStartStrip(" << vehWidth << ") = " << startPos << std::endl;
+	return startPos;
+}i
 
